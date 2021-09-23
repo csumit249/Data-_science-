@@ -1,5 +1,5 @@
 # Data-_science-
-##Introduction to Data Science
+## Introduction to Data Science
  Data Science is a blend of various tools, algorithms, and machine learning principles with the goal to discover hidden patterns from the raw data. 
 Data Science is primarily used to make decisions and predictions making use of predictive causal analytics, prescriptive analytics (predictive plus decision science) and machine learning.
 
