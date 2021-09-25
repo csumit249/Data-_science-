@@ -1,4 +1,4 @@
-# Data-_science-
+# Data-Science
 ## Introduction to Data Science
  Data Science is a blend of various tools, algorithms, and machine learning principles with the goal to discover hidden patterns from the raw data. 
 Data Science is primarily used to make decisions and predictions making use of predictive causal analytics, prescriptive analytics (predictive plus decision science) and machine learning.
@@ -30,9 +30,9 @@ Data Science is primarily used to make decisions and predictions making use of p
      
 Phase 1—The required resources present in terms of people, technology, time and data to support the project. In this phase, you also need to frame the business problem and formulate initial hypotheses (IH) to test.
 Data preparation: You need to explore, preprocess and condition data prior to modeling. Further, you will perform ETLT (extract, transform, load and transform) to get data into the sandbox. Let’s have a look at the Statistical Analysis flow below
- 
-  ![image](https://user-images.githubusercontent.com/42414598/134497512-485118c4-0827-49b9-ad08-72247cb55836.png)
 
+![Untitled-1](https://user-images.githubusercontent.com/42414598/134766825-a49c2b3a-bb84-4f2a-8ca9-3eda56ed35df.jpg)
+ 
 # <h1> Model Planning 
   
  We will determine the methods and techniques to draw
@@ -51,6 +51,6 @@ Hadoop and is used for creating repeatable and reusable
 model flow diagrams. Although, many tools are present 
 in the market but R is the most commonly used tool
 
-  ![image](https://user-images.githubusercontent.com/42414598/134498822-0adf25e2-2d03-4adc-8804-f5cabcd935f1.png)
+![2 (1)](https://user-images.githubusercontent.com/42414598/134766838-6d811ae2-14ac-4a27-91de-8b5926590048.jpg)
 
       
