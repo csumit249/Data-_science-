@@ -1,0 +1,110 @@
+ #First, import NumPy and Pandas libraries.
+ import numpy as np
+ import pandas as pd
+ my_data = [10,20,30]     #Initialize data elements 
+ arr = np.array(my_data)  #Form NumPy array of the elements
+ arr    #Display the array 
+Output: array([10, 20, 30])
+#############################################################################
+ ser = pd.Series(data = my_data)   #Form Pandas Series of the elements
+ print(ser)    #Display the series 
+ 
+ import pandas as pd
+ 
+ser4 = pd.Series({"India": "New Delhi",
+                  "Japan": "Tokyo",
+                  "UK": "London"})
+print(ser4)
+
+import pandas as pd
+ 
+employees = pd.DataFrame(
+    data={'Name': ['John Doe', 'William Spark'],
+          'Occupation': ['Chemist', 'Statistician'],
+          'Date Of Join': ['2018-01-25', '2018-01-26'],
+          'Age': [23, 24]},
+    index=['Emp001', 'Emp002'],
+    columns=['Name', 'Occupation', 'Date Of Join', 'Age'])
+ 
+print(employees)
+
+
+import pandas as pd
+ 
+df = pd.DataFrame({'Age': [30, 20, 22, 40, 32, 28, 39],
+                   'Color': ['Blue', 'Green', 'Red', 'White', 'Gray', 'Black',
+                             'Red'],
+                   'Food': ['Steak', 'Lamb', 'Mango', 'Apple', 'Cheese',
+                            'Melon', 'Beans'],
+                   'Height': [165, 70, 120, 80, 180, 172, 150],
+                   'Score': [4.6, 8.3, 9.0, 3.3, 1.8, 9.5, 2.2],
+                   'State': ['NY', 'TX', 'FL', 'AL', 'AK', 'TX', 'TX']
+                   },
+                  index=['Jane', 'Nick', 'Aaron', 'Penelope', 'Dean',
+                         'Christina', 'Cornelia'])
+ 
+print("\n -- Change order using columns -- \n")
+new_order = [3, 2, 1, 4, 5, 0]
+df = df[df.columns[new_order]]
+print(df)
+ 
+print("\n -- Change order using reindex -- \n")
+df = df.reindex(['State', 'Color', 'Age', 'Food', 'Score', 'Height'], axis=1)
+print(df)
+
+
+import pandas as pd
+import numpy as np
+ 
+np.random.seed(5)
+ 
+df_random = pd.DataFrame(np.random.randint(100, size=(10, 6)),
+                         columns=list('ABCDEF'),
+                         index=['Row-{}'.format(i) for i in range(10)])
+ 
+print(df_random)
+
+
+import pandas as pd
+ 
+df = pd.DataFrame([[10, 20, 30, 40], [7, 14, 21, 28], [5, 5, 0, 0],
+                   [6, 6, 6, 6], [8, 8, 8, 8], [5, 5, 0, 0]],
+                  columns=['Apple', 'Orange', 'Rice', 'Oil'],
+                  index=['Basket1', 'Basket2', 'Basket3',
+                         'Basket4', 'Basket5', 'Basket6'])
+ 
+print(df)
+print("\n ----------------------------- \n")
+print(df[['Apple', 'Orange', 'Rice', 'Oil']].
+      groupby(['Apple']).agg(['mean', 'count']))
+ 
+ 
+ 
+import pandas as pd
+ 
+df = pd.DataFrame(columns=['Name', 'Age'])
+ 
+df.loc[1, 'Name'] = 'Rocky'
+df.loc[1, 'Age'] = 23
+ 
+df.loc[2, 'Name'] = 'Sunny'
+ 
+print(df)
+
+# Python's program to convert string into date time
+ 
+from datetime import datetime
+from dateutil import parser
+ 
+d1 = "Jan 7 2015  1:15PM"
+d2 = "2015 Jan 7  1:33PM"
+ 
+# If you know date format
+date1 = datetime.strptime(d1, '%b %d %Y %I:%M%p')
+print(type(date1))
+print(date1)
+ 
+# If you don't know date format
+date2 = parser.parse(d2)
+print(type(date2))
+print(date2)
