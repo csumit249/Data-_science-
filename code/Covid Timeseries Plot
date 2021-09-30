@@ -1,0 +1,15 @@
+import pandas as pd
+from matplotlib import pyplot
+data = pd.read_csv("D:/embedded/time_series_covid_19_confirmed.csv")
+col =[]
+time_data=[]
+country = data['Country/Region']
+col.append(data.columns)
+for i in range(4,len(col[0])):
+    time_data.append(col[0][i])
+"""Got column name of time series"""
+data_row = pd.DataFrame(data,columns=time_data)
+for j in range(130,138):
+    test_data = pd.DataFrame(data_row.iloc[j])
+    test_data.plot(title=str(country.iloc[j]))
+    pyplot.show()
