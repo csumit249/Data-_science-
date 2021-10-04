@@ -146,19 +146,23 @@ Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmar
  # <h1> Histograms and the Empirical Cumulative Distribution Function
  Histograms are a common visual representation of a quantitative variable. Histograms summarize the data using rectangles to display either frequencies or proportions as normalized frequencies. In making a histogram, we   
   • Divide the range of data into bins of equal width (usually, but not always). 
+   
+ • Count the number of observations in each class. 
   
-  • Count the number of observations in each class. 
-  
-  • Draw the histogram rectangles representing frequencies or percents by area.
-  
-Interpret the histogram by giving 
-  
-  • the overall pattern
-  
-  – the center
+ • Draw the histogram rectangles representing frequencies or percents by area.
+ 
+ Interpret the histogram by giving 
+   
+ • the overall pattern
+ – the center
+ 
   – the spread
+ 
   – the shape (symmetry, skewness, peaks)
+ 
   • and deviations from the pattern
+ 
   – outliers
+ 
   – gaps
   
