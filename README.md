@@ -132,7 +132,7 @@ To make a simple bar graph in R,
 > females <- c(0,71,27,0,2)
 > hiv<-array(c(males,females), dim=c(5,2))
                                
-<h1> Two-way Tables   
+# <h1> Two-way Tables   
  Relationships between two categorical variables can be shown through a two-way table (also known as a contingency table , cross tabulation table or a cross classifying table ).
  
 Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmark report saying that smoking may be hazardous to health. This led to many influential reports on the topic, including the study of the smoking habits of 5375 high school children in Tucson in 1967. Here is a two-way table summarizing some of the results.
@@ -143,9 +143,8 @@ Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmar
 • The cells display the counts for each of the categories of row and column variables.
  
  
- <h1> Histograms and the Empirical Cumulative Distribution Function
- Histograms are a common visual representation of a quantitative variable. Histograms summarize the data using rectangles to display either frequencies or proportions as normalized frequencies. In making a histogram, we 
-  
+ # <h1> Histograms and the Empirical Cumulative Distribution Function
+ Histograms are a common visual representation of a quantitative variable. Histograms summarize the data using rectangles to display either frequencies or proportions as normalized frequencies. In making a histogram, we   
   • Divide the range of data into bins of equal width (usually, but not always). 
   
   • Count the number of observations in each class. 
