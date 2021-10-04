@@ -262,7 +262,7 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  The value Q3 −Q1 is called the interquartile range and is denoted by IQR. It is found in Rwith the command IQR. Outliers are somewhat arbitrarily chosen to be those above Q3 + 3/2 IQR and below Q1 − 3/2 IQR. With this criterion, the ages of Ronald Reagan and Donald Trump, considered outliers, are displayed by the two circles at the top of the boxplot. The boxplot command has the default value range = 1.5 in the choice of displaying outliers. This can be altered to loosen or tighten this criterion.
  
  
- 2 Sample Variance and Standard Deviation
+ 1 Sample Variance and Standard Deviation
  
  The sample variance averages the square of the differences from the mean
  
@@ -282,4 +282,24 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  
  
  ![image](https://user-images.githubusercontent.com/42414598/135837223-a69d1075-0156-45be-93ef-69a96d655f69.png)
+ 
+ 
+2 Quantiles and Standardized Variables
+ 
+ A single observation, say 87 on a exam, gives little information about the performance on the exam. One way to include more about this observation would be to give the value of the empirical cumulative distribution function.
+
+ Exercise 2. For the example above, describe the quintile, decile, and percentile of the observation 87.
+ 
+ 
+A second way to evaluate a score of 87 is to related it to the mean. Thus, if the mean  ̄x = 76. Then, we might say that the exam score is 11 points above the mean. If the scores are quite spread out, then 11 points above the mean is just a little above average. If the scores are quite tightly spread, then 11 points is quite a bit above average. Thus, for
+comparisons, we will sometimes use the standardized version of xi, 
+ ![image](https://user-images.githubusercontent.com/42414598/135839536-777bf087-71f7-4647-8129-369bfa5443a6.png)
+
+ The observations zi have mean 0 and standard deviation 1. The value zi is also called the standard score , the z-value, the z-score, and the normal score. An individual z-score, zi, gives the number of standard deviations an observation xi is above (or below) the mean.
+The R command scale transforms the data to the standard score. For the ages of the presidents, we use the scale command to show the standardized ages. The head command show the first 6 rows of the output for presidents from George Washington to John Qunicy Adams.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135839705-406c00fc-7881-40f1-95c9-7ca7277106b3.png)
+ 
+ 
+
 
