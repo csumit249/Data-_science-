@@ -65,7 +65,9 @@ science, and an obligation to impartiality.
  
  
  Types of Data
+ 
  A data set provides information about a group of individuals.
+ 
  • Individuals are the objects described by the data.
  • Variables are characteristics of an individual. In order to present data, we must first recognize the types of data under consideration.
        – Categorical variables partition the individuals into classes. Other names for categorical variables are levels or factors. One special type of categorical variables are ordered categorical variables that suggest a ranking, say small. medium, large or mild, moderate, severe.
@@ -73,35 +75,25 @@ science, and an obligation to impartiality.
  
  Example 1.1 (individuals and variables). We consider two populations - the first is the nations of the world and the second is the people who live in those countries. Below is a collection of variables that might be used to study these populations.
  
- nations-         people
  
-population size-  age
+![image](https://user-images.githubusercontent.com/42414598/135840290-975b1478-bbd5-41d4-896c-1594288dc063.png)
  
-time zones-       height
- 
-average rainfall- gender
- 
-life expectancy-  ethnicities
- 
-mean income-      annual income
- 
-literacy rate-    literacy
- 
-capital city-     mother’s maiden name
- 
-largest river-    marital status
  
  
 # <h1> Categorical Data
 
  Pie Chart
+ 
  A pie chart is a circular chart divided into sectors, illustrating relative magnitudes in frequencies or percents. In a pie chart, the area is proportional to the quantity it represents.
  
  ![image](https://user-images.githubusercontent.com/42414598/135810376-89916b8c-d988-4276-89a4-2eb45bc9027e.png)
+ 
 
  Gene Ontology
     (GO) project is a bioinformatics initiative whose goal is to provide unified terminology of genes and their products. The project began in 1998 as a collaboration between three model organism databases, Drosophila, yeast, and mouse. The GO Consortium presently includes many databases, spanning repositories for plant, animal and microbial genomes. This project is supported by National Human Genome Research Institute. 
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135810536-56844108-14a7-43df-9f63-29c4aeb17b05.png)
+ 
  
  To make a simple pie chart in Rfor the proportion of AIDS cases among US males by transmission category.
 > males<- c(58,18,16,7,1)
@@ -144,7 +136,9 @@ Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmar
  
  
  # <h1> Histograms and the Empirical Cumulative Distribution Function
+ 
  Histograms are a common visual representation of a quantitative variable. Histograms summarize the data using rectangles to display either frequencies or proportions as normalized frequencies. In making a histogram, we   
+ 
   • Divide the range of data into bins of equal width (usually, but not always). 
    
  • Count the number of observations in each class. 
@@ -188,10 +182,12 @@ y1,y2 ...,yn, taken from observations with input x1,x2,...,xn are called the res
  Example 1.17 (Fossils of the Archeopteryx). The name Archeopteryx derives from the ancient Greek meaning “ancient feather” or “ancient wing”. Archeopteryx is generally accepted by palaeontologists as being the oldest known bird. Archaeopteryx lived in the Late Jurassic Period around 150 million years ago, in what is now southern Germany
 during a time when Europe was an archipelago of islands in a shallow warm tropical sea. The first complete specimen of Archaeopteryx was announced in 1861, only two years after Charles Darwin published On the Origin of Species,and thus became a key piece of evidence in the debate over evolution. Below are the lengths in centimeters of the femur and humerus for the five specimens of Archeopteryx that have preserved both bones.
  
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135827166-12d719e1-120e-49b8-a014-8d67a2d83903.png)
 
  
  # <h1>  Time Plots
+ 
  
  Some data sets come with an order of events, say ordered by time.
  
@@ -201,8 +197,11 @@ Today, about 90% of vehicular fuel needs are met by oil. Petroleum also makes up
  
  ![image](https://user-images.githubusercontent.com/42414598/135827409-0d8a9ec0-b8ed-4dd1-b576-b1927bd41c4c.png)
  
+ 
  With the data given in two columns oil and year, the time plot plot(year,oil,type="b") is given on the left side of the figure below. This uses type="b" that puts both lines and circles on the plot.
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135827519-5d82f524-a9e4-4afe-b881-17126284aec1.png)
+ 
 
  
  Sometimes a transformation of the data can reveal the structure of the time series. For example, if we wish to examine an exponential increase displayed in the oil production plot, then we can take the base 10 logarithm of the production and give its time series plot. This is shown in the plot on the right above. (In R, we write log(x) for the natural logarithm and log(x,10) for the base 10 logarithm.
