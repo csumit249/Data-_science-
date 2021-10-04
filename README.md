@@ -166,3 +166,14 @@ Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmar
  
   – gaps
   
+ # <h1> Scatterplots
+ 
+ We now consider two dimensional data. The values of the first variable x1,x2,...,xn are assumed known and in an experiment and are often set by the experimenter. This variable is called the explanatory, predictor, discriptor, or input variables and in a two dimensional scatterplot of the data display its values on the horizontal axis. The values
+y1,y2 ...,yn, taken from observations with input x1,x2,...,xn are called the response or target variable and its values are displayed on the vertical axis. In describing a scatterplot, take into consideration 
+ • the form, for example,
+ – linear
+– curved relationships
+ – clusters
+ • the direction,
+ – a positive or negative association
+ • and the strength of the aspects of the scatterplot.
