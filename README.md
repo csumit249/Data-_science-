@@ -170,10 +170,116 @@ Example . In 1964, Surgeon General Dr. Luther Leonidas Terry published a landmar
  
  We now consider two dimensional data. The values of the first variable x1,x2,...,xn are assumed known and in an experiment and are often set by the experimenter. This variable is called the explanatory, predictor, discriptor, or input variables and in a two dimensional scatterplot of the data display its values on the horizontal axis. The values
 y1,y2 ...,yn, taken from observations with input x1,x2,...,xn are called the response or target variable and its values are displayed on the vertical axis. In describing a scatterplot, take into consideration 
+ 
  • the form, for example,
+ 
  – linear
+ 
 – curved relationships
+ 
  – clusters
+ 
  • the direction,
+ 
  – a positive or negative association
+ 
  • and the strength of the aspects of the scatterplot.
+ 
+ Example 1.17 (Fossils of the Archeopteryx). The name Archeopteryx derives from the ancient Greek meaning “ancient feather” or “ancient wing”. Archeopteryx is generally accepted by palaeontologists as being the oldest known bird. Archaeopteryx lived in the Late Jurassic Period around 150 million years ago, in what is now southern Germany
+during a time when Europe was an archipelago of islands in a shallow warm tropical sea. The first complete specimen of Archaeopteryx was announced in 1861, only two years after Charles Darwin published On the Origin of Species,and thus became a key piece of evidence in the debate over evolution. Below are the lengths in centimeters of the femur and humerus for the five specimens of Archeopteryx that have preserved both bones.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135827166-12d719e1-120e-49b8-a014-8d67a2d83903.png)
+
+ 
+ # <h1>  Time Plots
+ 
+ Some data sets come with an order of events, say ordered by time.
+ 
+Example 1.19. The modern history of petroleum began in the 19th century with the refining of kerosene from crude oil. The world’s first commercial oil wells were drilled in the 1850s in Poland and in Romania.The first oil well in North America was in Oil Springs, Ontario, Canada in 1858. The US petroleum industry began with Edwin Drake’s drilling
+of a 69-foot deep oil well in 1859 on Oil Creek near Titusville, Pennsylvania for the Seneca Oil Company. The industry grew through the 1800s, driven by the demand for kerosene and oil lamps. The introduction of the internal combustion engine in the early part of the 20th century provided a demand that has largely sustained the industry to this day.
+Today, about 90% of vehicular fuel needs are met by oil. Petroleum also makes up 40% of total energy consumption in the United States, but is responsible for only 2% of electricity generation. Oil use increased exponentially until the world oil crises of the 1970s.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135827409-0d8a9ec0-b8ed-4dd1-b576-b1927bd41c4c.png)
+ 
+ With the data given in two columns oil and year, the time plot plot(year,oil,type="b") is given on the left side of the figure below. This uses type="b" that puts both lines and circles on the plot.
+ ![image](https://user-images.githubusercontent.com/42414598/135827519-5d82f524-a9e4-4afe-b881-17126284aec1.png)
+
+ 
+ Sometimes a transformation of the data can reveal the structure of the time series. For example, if we wish to examine an exponential increase displayed in the oil production plot, then we can take the base 10 logarithm of the production and give its time series plot. This is shown in the plot on the right above. (In R, we write log(x) for the natural logarithm and log(x,10) for the base 10 logarithm.
+ 
+ # <h1> Chapter 2 Describing Distributions with Numbers
+ 
+ These data can be subject to the operations of arithmetic.In particular, we can add or subtract observation values, we can sort them and rank them from lowest to highest.
+We will look at two fundamental properties of these observations. The first is a measure of the center value for the data, i.e., the median or the mean.
+ 
+In addition, to give a sense of the spread in the data, we often give the smallest and largest observations as well as the observed value that is 1/4 and 3/4 of the way up this list, known at the first and third quartiles. This difference, known as the interquartile range is a measure of the spread or the dispersion of the data. For the mean, we commonly use the standard deviation to describe the spread of the data.
+ 
+ 1 Medians
+ 
+ The median take the middle value for x1,x2,...,xn after the data has been sorted from smallest to largest, x(1),x(2),...,x(n).
+ (x(k) is called the k-th order statistic. Sorting can be accomplished in Rby using the sort command.) If n is odd, then this is just the value of the middle observation x((n+1)/2). If n is even, then the two values closest to the center are averaged. 
+ 
+![image](https://user-images.githubusercontent.com/42414598/135830687-2785fab4-9c57-4c89-b381-98df7db96b7a.png)
+ 
+ 2 Means
+ 
+ For a collection of numeric data, x1,x2,...,xn, the sample mean is the numerical average.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135830894-dfce3f46-e1b4-4948-935b-6749325ae5ab.png)
+ 
+Alternatively, if the value x occurs n(x) times in the data, then use the distributive property to see that So the mean  ̄x depends only on the proportion of observations p(x) for each value of x.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135831016-6c62805b-3840-4c40-adb6-e28ea860bf51.png)
+
+ Example 2.1. For the data set {1,2,2,2,3,3,4,4,4,5}, we have n = 10 and the sum 
+ 1 + 2 + 2 + 2 + 3 + 3 + 4 + 4 + 4 + 5 = 1n(1) + 2n(2) + 3n(3) + 4n(4) + 5n(5)
+       = 1(1) + 2(3) + 3(2) + 4(3) + 5(1) 
+       = 30
+Thus,  ̄x = 30/10 = 3.
+ 
+ 
+ Example 2.2. For the data on the length in microns of wild type Bacillus subtilis data, we have
+ ![image](https://user-images.githubusercontent.com/42414598/135831762-fcf6906a-49fe-4fcb-850b-be9a2a52e8da.png)
+ 
+ So the sample mean  ̄x = 2.49.
+If we store the data in Rin a vector x, we can write mean(x) which is equal to sum(x)/length(x) to
+compute the mean. To extend this idea a bit, we can take a real-valued function hand instead consider the observations h(x1),h(x2),...,h(xn),
+then
+ ![image](https://user-images.githubusercontent.com/42414598/135831878-f9f38d17-2af9-42ae-be17-78d1618e8ed9.png)
+ 
+# <h1> Five Number Summary
+ 
+The first and third quartile, Q1 and Q3, are, respectively, the median of the lower half and the upper half of the data. The five number summary of the data are the values of the minimum, Q1, the median, Q3 and the maximum. Thesevalues, along with the mean, are given in Rusing summary(x).
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135834015-768feac8-8e74-4fce-b2b6-76801bd094d5.png)
+
+ We can display the five number summary using a boxplot.
+> boxplot(age, main = c("Age of Presidents at the Time of Inauguration"))
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135835647-f747b032-3d1c-4c3d-9f40-2d0aad5194f3.png)
+ 
+ The value Q3 −Q1 is called the interquartile range and is denoted by IQR. It is found in Rwith the command IQR. Outliers are somewhat arbitrarily chosen to be those above Q3 + 3/2 IQR and below Q1 − 3/2 IQR. With this criterion, the ages of Ronald Reagan and Donald Trump, considered outliers, are displayed by the two circles at the top of the boxplot. The boxplot command has the default value range = 1.5 in the choice of displaying outliers. This can be altered to loosen or tighten this criterion.
+ 
+ 
+ 2 Sample Variance and Standard Deviation
+ 
+ The sample variance averages the square of the differences from the mean
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135836755-0b9f0e01-c504-41a2-936b-3ceeaaa9f739.png)
+
+ Example 2.7. For the data set on Bacillus subtilis data, we have  ̄x = 498/200 = 2.49
+
+ ![image](https://user-images.githubusercontent.com/42414598/135836921-3486f6f4-671e-40dd-8d51-905158e85e4f.png)
+
+ So the sample variance s2x = 90.48/199 = 0.4546734 and standard deviation sx = 0.6742947. To accomplish this in R.
+
+ ![image](https://user-images.githubusercontent.com/42414598/135837043-ba0b3f41-2ee1-4b76-a060-94f4071f922c.png)
+
+ For quantitative variables that take on positive values, we can take the ratio of the standard deviation to the mean called the coefficient of variation as a measure of the relative variability of the observations. Note that cvx is a pure number and has no units.
+ cvx = sx/ ̄x .
+ 
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135837223-a69d1075-0156-45be-93ef-69a96d655f69.png)
+
