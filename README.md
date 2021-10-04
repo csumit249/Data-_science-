@@ -54,3 +54,7 @@ in the market but R is the most commonly used tool
 ![2 (1)](https://user-images.githubusercontent.com/42414598/134766838-6d811ae2-14ac-4a27-91de-8b5926590048.jpg)
 
       
+# <h1> Statistics and Visualization
+ 
+ Displaying Data
+ 
