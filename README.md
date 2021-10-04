@@ -56,5 +56,29 @@ in the market but R is the most commonly used tool
       
 # <h1> Statistics and Visualization
  
+ Statistics is a mathematical science that is concerned with the collection, analysis, interpretation or explanation,and presentation of data. Properly used statistical principles are essential in guiding any inquiry informed by data and,especially in the phase of data exploration, is routinely a fundamental source for discovery and innovation. Insights
+from data may come from a well conceived visualization of the data, from modern methods of statistical learning and model selection as well as from time-honored formal statistical procedures.
+ 
  Displaying Data
+ The first encounters one has to data are through graphical displays and numerical summaries. The goal is to find an elegant method for this presentation that is at the same time both objective and informative - making clear with a few lines or a few numbers the salient features of the data. In this sense, data presentation is at the same time an art, a
+science, and an obligation to impartiality.
+ 
+ 
+ Types of Data
+ A data set provides information about a group of individuals.
+ • Individuals are the objects described by the data.
+ • Variables are characteristics of an individual. In order to present data, we must first recognize the types of data under consideration.
+       – Categorical variables partition the individuals into classes. Other names for categorical variables are levels or factors. One special type of categorical variables are ordered categorical variables that suggest a ranking, say small. medium, large or mild, moderate, severe.
+      – Quantitative variables are those for which arithmetic operations like addition and differences make sense.
+ 
+ Example 1.1 (individuals and variables). We consider two populations - the first is the nations of the world and the second is the people who live in those countries. Below is a collection of variables that might be used to study these populations.
+ nations people
+population size age
+time zones height
+average rainfall gender
+life expectancy ethnicities
+mean income annual income
+literacy rate literacy
+capital city mother’s maiden name
+largest river marital status
  
