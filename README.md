@@ -59,7 +59,7 @@ in the market but R is the most commonly used tool
  Statistics is a mathematical science that is concerned with the collection, analysis, interpretation or explanation,and presentation of data. Properly used statistical principles are essential in guiding any inquiry informed by data and,especially in the phase of data exploration, is routinely a fundamental source for discovery and innovation. Insights
 from data may come from a well conceived visualization of the data, from modern methods of statistical learning and model selection as well as from time-honored formal statistical procedures.
  
- Displaying Data
+ # <h1> Displaying Data
  The first encounters one has to data are through graphical displays and numerical summaries. The goal is to find an elegant method for this presentation that is at the same time both objective and informative - making clear with a few lines or a few numbers the salient features of the data. In this sense, data presentation is at the same time an art, a
 science, and an obligation to impartiality.
  
@@ -90,5 +90,49 @@ literacy rate-    literacy
 capital city-     mother’s maiden name
  
 largest river-    marital status
+ 
+ 
+# <h1> Categorical Data
+
+ Pie Chart
+ A pie chart is a circular chart divided into sectors, illustrating relative magnitudes in frequencies or percents. In a pie chart, the area is proportional to the quantity it represents.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135810376-89916b8c-d988-4276-89a4-2eb45bc9027e.png)
+
+ Gene Ontology
+    (GO) project is a bioinformatics initiative whose goal is to provide unified terminology of genes and their products. The project began in 1998 as a collaboration between three model organism databases, Drosophila, yeast, and mouse. The GO Consortium presently includes many databases, spanning repositories for plant, animal and microbial genomes. This project is supported by National Human Genome Research Institute. 
+ ![image](https://user-images.githubusercontent.com/42414598/135810536-56844108-14a7-43df-9f63-29c4aeb17b05.png)
+ 
+ To make a simple pie chart in Rfor the proportion of AIDS cases among US males by transmission category.
+> males<- c(58,18,16,7,1)
+> pie(males)
+ 
+ • Define some colors ideal for black and white print.
+> colors <- c("white","grey70","grey90","grey50","black")
+            
+• Calculate the percentage for each category.
+> male_labels <- round(males/sum(males)*100, 1)
+The number 1 indicates rounded to one decimal place.
+> male_labels <- paste(male_labels, "\%", sep=" ")
+This adds a space and a percent sign.
+                 
+• Create a pie chart with defined heading and custom colors and labels and create a legend.
+> pie(males, main="Proportion of AIDS Cases among Males by Transmission Category
++ Diagnosed - USA, 2005", col=colors, labels=male_labels, cex=0.8)
+> legend("topright", c("Male-male contact","Injection drug use (IDU)",
++ "High-risk heterosexual contact","Male-male contact and IDU","Other"),
++ cex=0.8,fill=colors)
+
+# <h1> Bar Charts
+ The human eye is good at judging linear measures and poor at judging relative areas, a bar chart or bar graph is often preferable to pie charts as a way to display categorical data.
+To make a simple bar graph in R,
+> barplot(males)
+ 
+ • Enter the data for females and create a 5 ×2 array.
+> females <- c(0,71,27,0,2)
+> hiv<-array(c(males,females), dim=c(5,2))
+                               
+<h1> Two-way Tables   
+ Relationships between two categorical variables can be shown through a two-way table (also known as a contingency table , cross tabulation table or a cross classifying table ).
  
  
