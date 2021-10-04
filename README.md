@@ -72,13 +72,14 @@ science, and an obligation to impartiality.
       – Quantitative variables are those for which arithmetic operations like addition and differences make sense.
  
  Example 1.1 (individuals and variables). We consider two populations - the first is the nations of the world and the second is the people who live in those countries. Below is a collection of variables that might be used to study these populations.
- nations people
-population size age
-time zones height
-average rainfall gender
-life expectancy ethnicities
-mean income annual income
-literacy rate literacy
-capital city mother’s maiden name
-largest river marital status
+ 
+ nations-         people
+population size-  age
+time zones-       height
+average rainfall- gender
+life expectancy-  ethnicities
+mean income-      annual income
+literacy rate-    literacy
+capital city-     mother’s maiden name
+largest river-    marital status
  
