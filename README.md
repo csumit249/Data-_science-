@@ -300,5 +300,87 @@ The R command scale transforms the data to the standard score. For the ages of t
  ![image](https://user-images.githubusercontent.com/42414598/135839705-406c00fc-7881-40f1-95c9-7ca7277106b3.png)
  
  
+# <h1> 3 Correlation and Regression
+ 
+ Reflection soon made it clear to me that not only were the two new problems identical in principle with the old one of kinship which I had already solved, but that all three of them were no more than special cases of a much more general problem–namely, that of Correlation.
+ 
+ 1 Covariance and Correlation
+ 
+ The covariance measures the linear relation-ship between a pair of quantitative measures x1,x2,...,xn and y1,y2,...,yn on the same sample of n individuals.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135992123-4b10eea1-57d7-454c-84d5-64be5b07dabb.png)
 
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135992224-8308a1e2-8da1-4824-a08c-092e55e0c740.png)
 
+ 
+ Exercise 1. Derive the alternative expression for the covariance:
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135993113-5de44947-f15c-4513-8d86-2c7701565af2.png)
+
+ Definition- The correlation, r, is the covariance of the standardized versions of x and y.
+ 
+ ![image](https://user-images.githubusercontent.com/42414598/135993250-b337c1bd-1e0f-48fa-a02a-56309be1004a.png)
+ 
+ The observations x and y are called uncorrelated if r(x,y) = 0.
+ 
+ -> Linear Regression
+
+ Covariance and correlation are measures of linear association. For the Archeopteryx measurements, we learn that the relationship in the length of the femur and the humerus is very nearly linear.  We now turn to situations in which the value of the first variable xi will be considered to be explanatory or predictive. The corresponding output observation yi, taken from the input xi, is called the response.
+ 
+ me is the response.
+In linear regression, the response variable is linearly related to the explanatory variable (also known as the co-variate), but is subject to deviation, discrepency, or to error. We write ![image](https://user-images.githubusercontent.com/42414598/135994906-d3c1f5e0-cb27-4108-b3b2-49be26e42be2.png)
+
+ Example - Let’s begin with 6 points and derive by hand the equation for regression line.
+ ![image](https://user-images.githubusercontent.com/42414598/135995144-7cc90980-6d62-4233-97ff-082bd7a77588.png)
+
+ Add the x and y values and divide by n = 6 to see that  ̄x = 0.5 and  ̄y = 0.
+ ![image](https://user-images.githubusercontent.com/42414598/135995263-192d2702-fd06-4daf-b6ad-370928399be1.png)
+
+ Thus,![image](https://user-images.githubusercontent.com/42414598/135995329-5c092e0f-9c14-4590-b80f-73beb0209831.png)
+
+ As seen in this example, fits are rarely perfect. The difference between the fit and the data is an estimate ![image](https://user-images.githubusercontent.com/42414598/135995497-ca5fa9f1-e73c-46f3-97eb-a06612c20c42.png) for the error ![image](https://user-images.githubusercontent.com/42414598/135995519-fb8e6a04-64f0-4e84-bc54-74e3bb04f950.png) This difference is called the residual. So,
+![image](https://user-images.githubusercontent.com/42414598/135995583-36643933-13a6-4989-bdaa-bd87bab8ce96.png)= RESIDUALi = DATAi −FITi = yi −ˆyi
+ 
+ Exercise- Use the equation above to show that ![image](https://user-images.githubusercontent.com/42414598/135996032-9ed9c5ec-f064-4468-97f9-74808803e140.png)
+ where the sums of squares of the fit or the variation of the fit,![image](https://user-images.githubusercontent.com/42414598/135996133-8a36b884-12a2-4cc0-b6a7-8e72c751f9fd.png)
+ ,and the sums of squares of the data or the variation of the data,![image](https://user-images.githubusercontent.com/42414598/135996251-63620399-7603-4782-9105-3e771bf031c2.png)
+
+ Because the fit and the residuals are uncorrelated, the Pythagorean identity (3.2) applies and we see that that
+ ![image](https://user-images.githubusercontent.com/42414598/135996388-a87bde5e-9dd3-43b4-a4f9-3e649e520f28.png)
+
+ This leads to the expression ![image](https://user-images.githubusercontent.com/42414598/135996444-5b7104c2-e4c2-4e6f-85e7-272fd99b9772.png)
+
+ where the sums of squares of the residuals or the variation of the residuals,![image](https://user-images.githubusercontent.com/42414598/135996522-4351f007-feae-47b2-9943-0e0bac8beb85.png)
+Thus, r2 of the variance in the data can be explained by the fit. As a consequence of this computation, many statistical software tools report r2 as a part of the linear regression analysis. For this reason, r2 is sometimes called the coefficient of determination. The remaining 1 −r2 of the variance in the data is found in the residuals.
+ 
+  -> Transformed Variables
+ 
+ For pairs of observations (x1,y1),...,(xn,yn), the linear relationship may exist not with these variables, but rather with transformation of the variables. In this case we have,
+ ![image](https://user-images.githubusercontent.com/42414598/135996839-e2c145cf-40af-458a-ae40-489d2692bddc.png)
+
+ A common choice to to perform linear regression on the variables  ̃y = g(y) and  ̃x = ψ(x) using the least squares criterion. In this case, g is called the link function
+For example, if
+ ![image](https://user-images.githubusercontent.com/42414598/135997073-dfbb0bd2-2db0-44cb-aa9d-9735d4cd8c04.png)
+So, in (3.13), the link function g(yi) = ln yi. The parameters are α = ln A and β = k.Before we look at an example, let’s review a few basic properties of logarithms.
+ 
+ Example- (Frank Amscombe). Consider the three data sets:
+ ![image](https://user-images.githubusercontent.com/42414598/135997297-25b92169-322f-437e-90e9-51dea873f713.png)
+
+ ![image](https://user-images.githubusercontent.com/42414598/135997382-1c9b0587-de95-452a-93c3-ee455435619b.png)
+
+ Each of these data sets has a regression line ˆy = 3 + 0.5x and correlations between 0.806 and 0.816. However, only the first is a suitable data set for linear regression. This example is meant to emphasize the point that software will happily compute a regression line and an coefficient of determination value, but further examination of the data is required to see if this method is appropriate for any given data set.
+ 
+ -> Extensions
+ We will discuss briefly two extensions - the first is a least squares criterion between x and y that is nonlinear in the parameters β = (β0,...,βk). Thus, the model is
+ ![image](https://user-images.githubusercontent.com/42414598/135997580-5cd2958b-8d3c-43c2-b80a-472e18afc1a8.png)
+
+ for g, a nonlinear function of the parameters. The second considers situations with more than one explanatory variable.
+ ![image](https://user-images.githubusercontent.com/42414598/135997641-634ec34d-646e-4e90-82ce-f48dbaf1d22d.png)
+This brief discussion does not have the detail necessary to begin to use these methods. It serves primarily as an invitation to begin to consult resources that more fully develop these ideas.
+ 
+ -> Nonlinear Regression
+ 
+ Here, we continue using estimation of parameters using a least squares criterion. ![Uploading image.png…]()
+
+ 
