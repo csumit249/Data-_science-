@@ -381,6 +381,34 @@ This brief discussion does not have the detail necessary to begin to use these m
  
  -> Nonlinear Regression
  
- Here, we continue using estimation of parameters using a least squares criterion. ![Uploading image.png…]()
+ Here, we continue using estimation of parameters using a least squares criterion. ![image](https://user-images.githubusercontent.com/42414598/135999258-0363630e-e3e8-4200-a38b-390071fdca74.png)
+ 
+ For example, gradient descent (also known as steepest descent, or the method of steepest descent) is an iterative method in which produces a sequence of parameter values. The increment of the parameter values for an iteration is proportional to the negative of the gradient of SS(β) evaluated at the current point. The hope is that the sequence converges to give the desired minimum value for SS(β). 
+ ![image](https://user-images.githubusercontent.com/42414598/135999889-57507486-9b9c-4821-ae2e-05e1c932ae70.png)
+ 
+ -> Multiple Linear Regression
+ 
+ Before we start with multiple linear regression, we first recall a couple of concepts and results from linear algebra.
+• Let Cij denote the entry in the i-th row and j-th column of a matrix C.
+• A matrix A with rA rows and cA and a matrix B with rB rows and cB columns can be multiplied to form a matrix AB provide that cA = rB, the number of columns in A equals the number of rows in B. In this case
+ ![image](https://user-images.githubusercontent.com/42414598/136000042-3c86482c-3865-430f-b1d7-e13ed010e764.png)
+
+ • The d-dimensional identity matrix I is the matrix with the value 1 for all entries on the diagonal (Ijj = 1,j =1 ...,d) and 0 for all other entries. Notice for and d-dimensional vector x, Ix = x.
+• A d ×d matrix C is called invertible with inverse C−1 provided that CC−1 = C−1C = I.
+Only one matrix can have this property.
+• Suppose we have a d-dimensional vector a of known values and a d×d matrix C and we want to determine the vectors x that satisfy a = Cx.
+This equation could have no solutions, a single solution, or an infinite number of solutions. If the matrix C is invertible, then we have a single solution x = C−1a.
+• The transpose of a matrix is obtained by reversing the rows and columns of a matrix. We use a superscript T to indicate the transpose. Thus, the ij entry of a matrix C is the ji entry of its transpose, CT.
+ 
+ Example->
+ ![image](https://user-images.githubusercontent.com/42414598/136000320-011aad6a-f424-4a53-87b9-432525f37b63.png)
+ 
+• A square matrix C is invertible if and only if its determinant det(C) not equal to 0. For a 2 ×2 matrix
+ ![image](https://user-images.githubusercontent.com/42414598/136000524-9e1f4b9e-d5d9-4f8c-a56f-2867a98d644f.png)
+ 
+ Example->  (ordinary least squares regression). In this case,
+ ![image](https://user-images.githubusercontent.com/42414598/136000789-4f765fe5-165c-43ff-b8c6-227cdcb33859.png)
+
+ ![image](https://user-images.githubusercontent.com/42414598/136000858-3665eb88-cb25-4b95-906b-56edb8935e8d.png)
 
  
