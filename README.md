@@ -253,10 +253,12 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  
  ![image](https://user-images.githubusercontent.com/42414598/135834015-768feac8-8e74-4fce-b2b6-76801bd094d5.png)
 
+ 
  We can display the five number summary using a boxplot.
 > boxplot(age, main = c("Age of Presidents at the Time of Inauguration"))
  
  ![image](https://user-images.githubusercontent.com/42414598/135835647-f747b032-3d1c-4c3d-9f40-2d0aad5194f3.png)
+ 
  
  The value Q3 −Q1 is called the interquartile range and is denoted by IQR. It is found in Rwith the command IQR. Outliers are somewhat arbitrarily chosen to be those above Q3 + 3/2 IQR and below Q1 − 3/2 IQR. With this criterion, the ages of Ronald Reagan and Donald Trump, considered outliers, are displayed by the two circles at the top of the boxplot. The boxplot command has the default value range = 1.5 in the choice of displaying outliers. This can be altered to loosen or tighten this criterion.
  
@@ -265,7 +267,9 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  
  The sample variance averages the square of the differences from the mean
  
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135836755-0b9f0e01-c504-41a2-936b-3ceeaaa9f739.png)
+ 
 
  Example 2.7. For the data set on Bacillus subtilis data, we have  ̄x = 498/200 = 2.49
 
@@ -278,11 +282,8 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  For quantitative variables that take on positive values, we can take the ratio of the standard deviation to the mean called the coefficient of variation as a measure of the relative variability of the observations. Note that cvx is a pure number and has no units.
  cvx = sx/ ̄x .
  
- 
- 
  ![image](https://user-images.githubusercontent.com/42414598/135837223-a69d1075-0156-45be-93ef-69a96d655f69.png)
- 
- 
+  
 2 Quantiles and Standardized Variables
  
  A single observation, say 87 on a exam, gives little information about the performance on the exam. One way to include more about this observation would be to give the value of the empirical cumulative distribution function.
@@ -292,6 +293,7 @@ The first and third quartile, Q1 and Q3, are, respectively, the median of the lo
  
 A second way to evaluate a score of 87 is to related it to the mean. Thus, if the mean  ̄x = 76. Then, we might say that the exam score is 11 points above the mean. If the scores are quite spread out, then 11 points above the mean is just a little above average. If the scores are quite tightly spread, then 11 points is quite a bit above average. Thus, for
 comparisons, we will sometimes use the standardized version of xi, 
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135839536-777bf087-71f7-4647-8129-369bfa5443a6.png)
 
  The observations zi have mean 0 and standard deviation 1. The value zi is also called the standard score , the z-value, the z-score, and the normal score. An individual z-score, zi, gives the number of standard deviations an observation xi is above (or below) the mean.
@@ -312,7 +314,6 @@ The R command scale transforms the data to the standard score. For the ages of t
 
  
  ![image](https://user-images.githubusercontent.com/42414598/135992224-8308a1e2-8da1-4824-a08c-092e55e0c740.png)
-
  
  Exercise 1. Derive the alternative expression for the covariance:
  
@@ -332,12 +333,15 @@ The R command scale transforms the data to the standard score. For the ages of t
 In linear regression, the response variable is linearly related to the explanatory variable (also known as the co-variate), but is subject to deviation, discrepency, or to error. We write ![image](https://user-images.githubusercontent.com/42414598/135994906-d3c1f5e0-cb27-4108-b3b2-49be26e42be2.png)
 
  Example - Let’s begin with 6 points and derive by hand the equation for regression line.
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135995144-7cc90980-6d62-4233-97ff-082bd7a77588.png)
 
  Add the x and y values and divide by n = 6 to see that  ̄x = 0.5 and  ̄y = 0.
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135995263-192d2702-fd06-4daf-b6ad-370928399be1.png)
 
- Thus,![image](https://user-images.githubusercontent.com/42414598/135995329-5c092e0f-9c14-4590-b80f-73beb0209831.png)
+ Thus,
+ ![image](https://user-images.githubusercontent.com/42414598/135995329-5c092e0f-9c14-4590-b80f-73beb0209831.png)
 
  As seen in this example, fits are rarely perfect. The difference between the fit and the data is an estimate ![image](https://user-images.githubusercontent.com/42414598/135995497-ca5fa9f1-e73c-46f3-97eb-a06612c20c42.png) for the error ![image](https://user-images.githubusercontent.com/42414598/135995519-fb8e6a04-64f0-4e84-bc54-74e3bb04f950.png) This difference is called the residual. So,
 ![image](https://user-images.githubusercontent.com/42414598/135995583-36643933-13a6-4989-bdaa-bd87bab8ce96.png)= RESIDUALi = DATAi −FITi = yi −ˆyi
@@ -347,24 +351,31 @@ In linear regression, the response variable is linearly related to the explanato
  ,and the sums of squares of the data or the variation of the data,![image](https://user-images.githubusercontent.com/42414598/135996251-63620399-7603-4782-9105-3e771bf031c2.png)
 
  Because the fit and the residuals are uncorrelated, the Pythagorean identity (3.2) applies and we see that that
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135996388-a87bde5e-9dd3-43b4-a4f9-3e649e520f28.png)
 
- This leads to the expression ![image](https://user-images.githubusercontent.com/42414598/135996444-5b7104c2-e4c2-4e6f-85e7-272fd99b9772.png)
+ This leads to the expression 
+ ![image](https://user-images.githubusercontent.com/42414598/135996444-5b7104c2-e4c2-4e6f-85e7-272fd99b9772.png)
 
- where the sums of squares of the residuals or the variation of the residuals,![image](https://user-images.githubusercontent.com/42414598/135996522-4351f007-feae-47b2-9943-0e0bac8beb85.png)
+ where the sums of squares of the residuals or the variation of the residuals,
+ ![image](https://user-images.githubusercontent.com/42414598/135996522-4351f007-feae-47b2-9943-0e0bac8beb85.png)
 Thus, r2 of the variance in the data can be explained by the fit. As a consequence of this computation, many statistical software tools report r2 as a part of the linear regression analysis. For this reason, r2 is sometimes called the coefficient of determination. The remaining 1 −r2 of the variance in the data is found in the residuals.
  
   -> Transformed Variables
  
  For pairs of observations (x1,y1),...,(xn,yn), the linear relationship may exist not with these variables, but rather with transformation of the variables. In this case we have,
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135996839-e2c145cf-40af-458a-ae40-489d2692bddc.png)
 
  A common choice to to perform linear regression on the variables  ̃y = g(y) and  ̃x = ψ(x) using the least squares criterion. In this case, g is called the link function
 For example, if
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135997073-dfbb0bd2-2db0-44cb-aa9d-9735d4cd8c04.png)
+ 
 So, in (3.13), the link function g(yi) = ln yi. The parameters are α = ln A and β = k.Before we look at an example, let’s review a few basic properties of logarithms.
  
  Example- (Frank Amscombe). Consider the three data sets:
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135997297-25b92169-322f-437e-90e9-51dea873f713.png)
 
  ![image](https://user-images.githubusercontent.com/42414598/135997382-1c9b0587-de95-452a-93c3-ee455435619b.png)
@@ -381,9 +392,11 @@ This brief discussion does not have the detail necessary to begin to use these m
  
  -> Nonlinear Regression
  
- Here, we continue using estimation of parameters using a least squares criterion. ![image](https://user-images.githubusercontent.com/42414598/135999258-0363630e-e3e8-4200-a38b-390071fdca74.png)
+ Here, we continue using estimation of parameters using a least squares criterion.
+ ![image](https://user-images.githubusercontent.com/42414598/135999258-0363630e-e3e8-4200-a38b-390071fdca74.png)
  
  For example, gradient descent (also known as steepest descent, or the method of steepest descent) is an iterative method in which produces a sequence of parameter values. The increment of the parameter values for an iteration is proportional to the negative of the gradient of SS(β) evaluated at the current point. The hope is that the sequence converges to give the desired minimum value for SS(β). 
+ 
  ![image](https://user-images.githubusercontent.com/42414598/135999889-57507486-9b9c-4821-ae2e-05e1c932ae70.png)
  
  -> Multiple Linear Regression
@@ -404,9 +417,11 @@ This equation could have no solutions, a single solution, or an infinite number 
  ![image](https://user-images.githubusercontent.com/42414598/136000320-011aad6a-f424-4a53-87b9-432525f37b63.png)
  
 • A square matrix C is invertible if and only if its determinant det(C) not equal to 0. For a 2 ×2 matrix
+ 
  ![image](https://user-images.githubusercontent.com/42414598/136000524-9e1f4b9e-d5d9-4f8c-a56f-2867a98d644f.png)
  
  Example->  (ordinary least squares regression). In this case,
+ 
  ![image](https://user-images.githubusercontent.com/42414598/136000789-4f765fe5-165c-43ff-b8c6-227cdcb33859.png)
 
  ![image](https://user-images.githubusercontent.com/42414598/136000858-3665eb88-cb25-4b95-906b-56edb8935e8d.png)
